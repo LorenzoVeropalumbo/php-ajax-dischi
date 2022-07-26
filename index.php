@@ -15,6 +15,17 @@
   <?php include __DIR__ . '/partials/header.php'; ?>
   <main>
     <div class="container">
+      <form action="get">
+        <select name="songs" id="select">
+          <?php foreach($database as $song) { ?>
+            <?php $song_types = [] ?>
+            <?php if(!in_array($song['genre'],$song_types)) { ?>
+              <?php $song_types[] = $song['genre'] ?>
+              <option value="<?php echo $song['genre'] ?>"><?php echo $song['genre'] ?></option>             
+            <?php } ?>
+          <?php } ?>
+        </select>
+      </form>     
       <div class="row">
         <?php foreach($database as $song) { ?>
           <div class="col">
