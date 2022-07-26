@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="img-container">
+      <img src="./partials/logo-small.svg" alt="">
+    </div>
+  </header>
+  <main>
+    <div id="root">
+      <div class="container">
+        <div class="row">
+          <div class="col" v-for="">
+            <div class="card-content">
+              <img src="<?php echo $song['poster']; ?>" alt="<?php echo $song['poster']; ?>">
+              <span class="text-tile"><?php echo $song['title']; ?></span>           
+              <div class="cont-subtitle">
+                <span class="subtitle"><?php echo $song['author']; ?></span>
+                <span class="subtitle"><?php echo $song['year']; ?></span>
+              </div>          
+            </div>
+          </div>     
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
