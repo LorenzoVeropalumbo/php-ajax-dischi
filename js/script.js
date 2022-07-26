@@ -9,6 +9,7 @@ var app = new Vue(
         axios.get('http://localhost:8888/php-ajax-dischi/api.php')
         .then((response) => {
           this.songs = response.data;
+          console.log(this.songs);
         });
       }
     },
