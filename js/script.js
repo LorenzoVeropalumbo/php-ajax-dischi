@@ -5,10 +5,11 @@ var app = new Vue(
       songs: [],
       genres: [],
       noDuplicateGenre: ['All',],
+      valueGenre: "All",
     },
     methods: {
-      getSongs(value) {
-        axios.get(`http://localhost:8888/php-ajax-dischi/api.php?value=${value}`)
+      getSongs() {
+        axios.get(`http://localhost:8888/php-ajax-dischi/api.php?value=${this.valueGenre}`)
         .then((response) => {       
           this.songs = response.data;        
         });
@@ -26,9 +27,6 @@ var app = new Vue(
           })
         });
       },
-      value(select){        
-        getSongs(select.target.value);
-      }
     },
     mounted() {
       this.getSongs();

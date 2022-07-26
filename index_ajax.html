@@ -21,7 +21,7 @@
   <main>
     <div id="root">
       <div class="container">
-         <select name="" id="" @change="value($event)">
+         <select name="song" id="select" v-model="valueGenre" @change="getSongs()">
           <option v-for="genre in noDuplicateGenre" :value="genre">{{genre}}</option>
          </select>     
         <div class="row">

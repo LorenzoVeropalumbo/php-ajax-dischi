@@ -11,7 +11,7 @@ img{
 }
 
 body{
-
+  overflow-y: hidden;
 }
 
 /* Header */
@@ -35,7 +35,8 @@ header .img-container img{
 /* MAIN */
 main{
   background-color: #1e2d3b;
-  height: calc(100vh - 80px);
+  height: calc(100% - 100px);
+  min-height: calc(100vh - 100px);
 }
 
 /* container */
@@ -47,7 +48,7 @@ main .container{
 
 main .container .row{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -89,4 +90,11 @@ main .container .row .col{
   display: block;
   font-size: 14px;
   color: #6d7175;
+}
+
+/* Select */
+#select{
+  margin-left: 15px;
+  padding: 3px 80px 3px 10px;
+  font-size: 20px;
 }
