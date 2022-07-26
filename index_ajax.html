@@ -21,6 +21,9 @@
   <main>
     <div id="root">
       <div class="container">
+         <select name="" id="" @change="value($event)">
+          <option v-for="genre in noDuplicateGenre" :value="genre">{{genre}}</option>
+         </select>     
         <div class="row">
           <div class="col" v-for="song in songs">
             <div class="card-content">
